@@ -12,9 +12,9 @@
 | **Method** | **Endpoint** | **Description** | **Parameters** | **Request Body** | **Response** | **Status Code** |
 | --- | --- | --- | --- | --- | --- | --- |
 | POST | /schedule | 일정 생성 | - | { "task": string, "place": string,"password": string } | {"id": long, "task": string, "place": string,"createdAt": string, "updatedAt": string } | 200 OK |
-| GET | /schedule/{id} | 일정 조회(전체) | Query :updatedDatememberName,memberId | - | {"id": long, "task": string, "place": string,"createdAt": string, "updatedAt": string } | 200 OK |
+| GET | /schedule/{id} | 일정 조회(전체) | Query :updatedDate, memberName, memberId | - | {"id": long, "task": string, "place": string,"createdAt": string, "updatedAt": string } | 200 OK |
 | GET | /schedule/{id} | 일정 조회(단건) | Path: id |  | {"id": long, "task": string, "place": string,"createdAt": string, "updatedAt": string } | 200 OK |
-| DELETE | /schedule/{id} | 회원 삭제 | Path : id ,Query : memberName, password |  |  | 200 OK |
+| DELETE | /schedule/{id} | 회원 삭제 | Path : id , Query : memberName, password |  |  | 200 OK |
 
 ```sql
 CREATE TABLE member (
